@@ -1,0 +1,22 @@
+.profile__occupation {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    margin: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@media (max-width: 640px) {
+    .profile__occupation {
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        margin: 10px 0 0 0;
+        min-width: 282px;
+    }
+}

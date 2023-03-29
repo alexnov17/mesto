@@ -1,0 +1,12 @@
+.profile-popup__container {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+    max-width: 430px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
