@@ -1,4 +1,4 @@
-.profile-popup__close-button {
+.popup__close-button {
     background-image: url(../../../images/profile-popup-close-button.svg);
     background-color: transparent;
     background-repeat: no-repeat;
@@ -13,16 +13,17 @@
     padding: 0;
 }
 
-.profile-popup__close-button:hover {
+.popup__close-button:hover {
     opacity: 0.6;
 }
 
 @media (max-width: 560px) {
-    .profile-popup__close-button {
+    .popup__close-button {
         top: -36px;
         right: 0;
         min-width: 20px;
         min-height: 20px;
+        background-size: cover;
     }
 
 }

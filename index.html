@@ -32,59 +32,59 @@
 
             <section class="cards">
 
-                <div class="card">
+                <article class="card">
                     <img src="./images/karachaevsk.jpg" alt="Карачаевск храм" class="card__image">
                     <div class="card__info">
                         <h2 class="card__place-name">Карачаевск</h2>
                         <button class="card__like-button" type="button"
                             aria-label="Отметить как понравившиеся"></button>
                     </div>
-                </div>
+                </article>
 
-                <div class="card">
+                <article class="card">
                     <img src="./images/gora-elbrus.jpg" alt="Гора Эльбрус" class="card__image">
                     <div class="card__info">
                         <h2 class="card__place-name">Гора Эльбрус</h2>
                         <button class="card__like-button" type="button"
                             aria-label="Отметить как понравившиеся"></button>
                     </div>
-                </div>
+                </article>
 
-                <div class="card">
+                <article class="card">
                     <img src="./images/dombay.jpg" alt="Домбай" class="card__image">
                     <div class="card__info">
                         <h2 class="card__place-name">Домбай</h2>
                         <button class="card__like-button" type="button"
                             aria-label="Отметить как понравившиеся"></button>
                     </div>
-                </div>
+                </article>
 
-                <div class="card">
+                <article class="card">
                     <img src="./images/gora-elbrus.jpg" alt="Гора Эльбрус" class="card__image">
                     <div class="card__info">
                         <h2 class="card__place-name">Гора Эльбрус</h2>
                         <button class="card__like-button" type="button"
                             aria-label="Отметить как понравившиеся"></button>
                     </div>
-                </div>
+                </article>
 
-                <div class="card">
+                <article class="card">
                     <img src="./images/dombay.jpg" alt="Домбай" class="card__image">
                     <div class="card__info">
                         <h2 class="card__place-name">Домбай</h2>
                         <button class="card__like-button" type="button"
                             aria-label="Отметить как понравившиеся"></button>
                     </div>
-                </div>
+                </article>
 
-                <div class="card">
+                <article class="card">
                     <img src="./images/karachaevsk.jpg" alt="Карачаевск храм" class="card__image">
                     <div class="card__info">
                         <h2 class="card__place-name">Карачаево-Черкессия</h2>
                         <button class="card__like-button" type="button"
                             aria-label="Отметить как понравившиеся"></button>
                     </div>
-                </div>
+                </article>
 
             </section>
 
@@ -96,17 +96,14 @@
 
     </div>
 
-    <section class="profile-popup">
-        <div class="profile-popup__container">
-            <button class="profile-popup__close-button" aria-label="Закрыть редактор профиля"></button>
-            <form class="profile-popup__form">
-                <h3 class="profile-popup__title">Редактировать профиль</h3>
-                <input type="text" class="profile-popup__input profile-popup__input_type_name"
-                    placeholder="Жак-Ив Кусто">
-                <input type="text" class="profile-popup__input profile-popup__input_type_about"
-                    placeholder="Исследователь океана">
-                <button type="submit" class="profile-popup__save-button"
-                    aria-label="Сохранить изменения">Сохранить</button>
+    <section class="popup">
+        <div class="popup__container">
+            <button class="popup__close-button" type="button" aria-label="Закрыть редактор профиля"></button>
+            <h2 class="popup__title">Редактировать профиль</h2>
+            <form class="popup__form" name="popupform">
+                <input type="text" class="popup__input popup__input_type_name" placeholder="Жак-Ив Кусто">
+                <input type="text" class="popup__input popup__input_type_about" placeholder="Исследователь океана">
+                <button type="submit" class="popup__save-button" aria-label="Сохранить изменения">Сохранить</button>
             </form>
 
         </div>

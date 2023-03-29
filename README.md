@@ -20,4 +20,4 @@
 
 **Ссылка на проект**
 
-Ссылка на проект - https://alexnov17.github.io/mesto/Index.html
+Ссылка на проект - https://alexnov17.github.io/mesto/index.html

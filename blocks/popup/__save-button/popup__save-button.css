@@ -1,9 +1,9 @@
-.profile-popup__save-button {
+.popup__save-button {
     max-width: 358px;
     background-color: #000;
     border-radius: 2px;
     border: none;
-    font-family: 'Inter';
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -15,12 +15,12 @@
     cursor: pointer;
 }
 
-.profile-popup__save-button:hover {
+.popup__save-button:hover {
     opacity: 0.8;
 }
 
 @media (max-width: 560px) {
-    .profile-popup__save-button {
+    .popup__save-button {
         margin: 45px 22px 25px;
         padding: 14px 0;
         font-size: 14px;
