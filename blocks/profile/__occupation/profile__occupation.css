@@ -9,6 +9,13 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    max-width: 294px;
+}
+
+@media (max-width: 930px) {
+    .profile__occupation {
+        max-width: 180px;
+    }
 }
 
 @media (max-width: 640px) {

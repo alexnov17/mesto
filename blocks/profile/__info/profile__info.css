@@ -5,6 +5,10 @@
     gap: 16px 18px;
     margin: 0 0 0 30px;
     align-items: center;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 @media (max-width: 640px) {
@@ -12,7 +16,6 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        align-items: flex-start;
         text-align: center;
         gap: 0;
         margin: 22px 0 0;
