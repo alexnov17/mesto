@@ -78,7 +78,7 @@ function addCard(initialCard, before) {
     } else {
         cards.append(card);
     }
-    const like = card.querySelector('.card__like-button');
+    let like = card.querySelector('.card__like-button');
     like.addEventListener('click', toggleLikeButton);
     let deleteButton = card.querySelector('.card__delete-button');
     deleteButton.addEventListener('click', handleDeleteButton);
