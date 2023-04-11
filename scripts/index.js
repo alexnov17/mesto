@@ -73,46 +73,35 @@ function handleProfileEditFormSubmit(evt) {
     closeProfilePopup()
 }
 
+const cardTemplate = document.querySelector('#card-template').content;
 
-
-
-//Добавление карточек
-function addCard(initialCard, before) {
-    const cardTemplate = document.querySelector('#card-template').content;
+function createCards(item) {
     const card = cardTemplate.querySelector('.card').cloneNode(true);
-    card.querySelector('.card__place-name').textContent = initialCard.name;
     const cardImage = card.querySelector('.card__image');
-    cardImage.src = initialCard.link;
-    cardImage.alt = initialCard.name;
-    if (before) {
-        createCard(card);
-    } else {
-        cards.append(card);
-    }
+    card.querySelector('.card__place-name').textContent = item.name;
+    cardImage.src = item.link;
+    cardImage.alt = item.name;
     const like = card.querySelector('.card__like-button');
     like.addEventListener('click', toggleLikeButton);
     const deleteButton = card.querySelector('.card__delete-button');
     deleteButton.addEventListener('click', handleDeleteButton);
     cardImage.addEventListener('click', openImagePopup);
+    return card
 }
 
-//Добавление новой карточки
-function createCard(item) {
-    const cardElement = cards.prepend(item);
-    return cardElement;
+function renderCards() {
+    createCards();
+    cards.prepend(card);
 }
 
-//Отображение карточек
-function cardsRender() {
-    initialCards.forEach((card) => addCard(card, false));
-}
+initialCards.reverse().forEach((card) => renderCards(card));
 
-cardsRender()
+renderCards()
 
 //Кнопка добавления новой карточки
 function handleAddCardFormSubmit(evt) {
     evt.preventDefault();
-    addCard({ name: cardInputName.value, link: cardInputLink.value }, true)
+    createCards({ name: cardInputName.value, link: cardInputLink.value });
     closeCardPopup()
 }
 
