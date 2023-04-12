@@ -16,6 +16,7 @@ const cardAddButton = document.querySelector('.profile__add-button');
 const cardCloseButton = cardPopup.querySelector('.popup__close-button');
 const imagePopup = document.querySelector('#image-popup');
 const closeImagePopupButton = imagePopup.querySelector('.popup__close-button');
+const cardTemplate = document.querySelector('#card-template').content;
 const initialCards = [
     {
         name: 'Архыз',
@@ -73,8 +74,6 @@ function handleProfileEditFormSubmit(evt) {
     closeProfilePopup()
 }
 
-const cardTemplate = document.querySelector('#card-template').content;
-
 function createCards(item) {
     const card = cardTemplate.querySelector('.card').cloneNode(true);
     const cardImage = card.querySelector('.card__image');
@@ -90,18 +89,16 @@ function createCards(item) {
 }
 
 function renderCards() {
-    createCards();
-    cards.prepend(card);
+    initialCards.forEach((card) => cards.append(createCards(card)));
 }
-
-initialCards.reverse().forEach((card) => renderCards(card));
 
 renderCards()
 
 //Кнопка добавления новой карточки
 function handleAddCardFormSubmit(evt) {
     evt.preventDefault();
-    createCards({ name: cardInputName.value, link: cardInputLink.value });
+    const newCard = createCards({ name: cardInputName.value, link: cardInputLink.value });
+    cards.prepend(newCard);
     closeCardPopup()
 }
 
@@ -149,4 +146,3 @@ cardEditForm.addEventListener('submit', handleAddCardFormSubmit);
 cardAddButton.addEventListener('click', openCardPopup);
 cardCloseButton.addEventListener('click', closeCardPopup);
 closeImagePopupButton.addEventListener('click', handlePopupImageCloseButton);
-
